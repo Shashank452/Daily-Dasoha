@@ -119,6 +119,14 @@
             android:textSize="16sp"
             app:cornerRadius="8dp"/>
 
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
         <!-- Login Link -->
         <LinearLayout
             android:layout_width="wrap_content"

@@ -12,7 +12,12 @@
           "package_name": "com.example.dailydasoha"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "846563458354-j1i88b278bd9q7lch9lctl5hfgb32s12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC_canwyntK-xdLWBeeu0h_sPXDAap-8K4"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846563458354-j1i88b278bd9q7lch9lctl5hfgb32s12.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

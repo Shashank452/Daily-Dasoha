@@ -17,6 +17,7 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
@@ -60,7 +62,13 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, SignUpActivity.class)));
         tvForgotPassword.setOnClickListener(v -> 
             startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class)));
-        findViewById(R.id.btnGoogleSignIn).setOnClickListener(v -> signInWithGoogle());
+        findViewById(R.id.btnGoogleSignIn).setOnClickListener(v -> {
+            if (mGoogleSignInClient != null) {
+                signInWithGoogle();
+            } else {
+                showError("Google Sign-In not initialized");
+            }
+        });
     }
 
     private void loginUser() {
@@ -68,19 +76,29 @@ public class LoginActivity extends AppCompatActivity {
         String password = etPassword.getText().toString().trim();
 
         if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+            showError("Please fill all fields");
             return;
         }
 
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            showError("Please enter a valid email address");
+            return;
+        }
+
+        showProgressDialog("Signing in...");
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this, task -> {
+                hideProgressDialog();
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    finish();
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    if (user != null) {
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        finish();
+                    } else {
+                        showError("Failed to get user data");
+                    }
                 } else {
-                    Toast.makeText(LoginActivity.this, 
-                        "Authentication failed: " + task.getException().getMessage(),
-                        Toast.LENGTH_SHORT).show();
+                    showError("Authentication failed: " + task.getException().getMessage());
                 }
             });
     }
@@ -98,7 +116,11 @@ public class LoginActivity extends AppCompatActivity {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuthWithGoogle(account.getIdToken());
+                if (account != null) {
+                    firebaseAuthWithGoogle(account.getIdToken());
+                } else {
+                    showError("No Google account selected");
+                }
             } catch (ApiException e) {
                 showError("Google sign in failed: " + e.getMessage());
             }
@@ -106,20 +128,28 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void firebaseAuthWithGoogle(String idToken) {
-        showProgressDialog("Signing in...");
+        if (idToken == null) {
+            showError("Invalid Google token");
+            return;
+        }
+
+        showProgressDialog("Signing in with Google...");
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, task -> {
-                    hideProgressDialog();
-                    if (task.isSuccessful()) {
-                        // Sign in success
+            .addOnCompleteListener(this, task -> {
+                hideProgressDialog();
+                if (task.isSuccessful()) {
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    if (user != null) {
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         finish();
                     } else {
-                        // Sign in failed
-                        showError("Authentication failed: " + task.getException().getMessage());
+                        showError("Failed to get user data");
                     }
-                });
+                } else {
+                    showError("Authentication failed: " + task.getException().getMessage());
+                }
+            });
     }
 
     private void showProgressDialog(String message) {
@@ -127,6 +157,7 @@ public class LoginActivity extends AppCompatActivity {
             progressDialog = new android.app.ProgressDialog(this);
             progressDialog.setMessage(message);
             progressDialog.setIndeterminate(true);
+            progressDialog.setCancelable(false);
         }
         progressDialog.show();
     }
@@ -140,4 +171,4 @@ public class LoginActivity extends AppCompatActivity {
     private void showError(String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
-} 
+}

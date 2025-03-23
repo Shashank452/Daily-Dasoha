@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +16,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SignUpActivity extends BaseActivity {
+public class SignUpActivity extends AppCompatActivity {
     private EditText etEmail, etPassword, etConfirmPassword, etName, etSchoolName;
     private Button btnSignUp;
+    private ProgressBar progressBar;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
@@ -39,6 +41,7 @@ public class SignUpActivity extends BaseActivity {
         etName = findViewById(R.id.etName);
         etSchoolName = findViewById(R.id.etSchoolName);
         btnSignUp = findViewById(R.id.btnSignUp);
+        progressBar = findViewById(R.id.progressBar);
     }
 
     private void setupClickListeners() {
@@ -57,28 +60,30 @@ public class SignUpActivity extends BaseActivity {
         }
 
         // Show progress
-        findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
         btnSignUp.setEnabled(false);
 
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this, task -> {
-                findViewById(R.id.progressBar).setVisibility(View.GONE);
+                progressBar.setVisibility(View.GONE);
                 btnSignUp.setEnabled(true);
                 
                 if (task.isSuccessful()) {
                     saveUserData(name, schoolName);
-                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
                     finish();
                 } else {
                     String errorMessage = task.getException() != null ? 
                         task.getException().getMessage() : "Unknown error occurred";
-                    showError("Sign up failed: " + errorMessage);
+                    Toast.makeText(SignUpActivity.this, "Sign up failed: " + errorMessage, Toast.LENGTH_LONG).show();
                 }
             })
             .addOnFailureListener(e -> {
-                findViewById(R.id.progressBar).setVisibility(View.GONE);
+                progressBar.setVisibility(View.GONE);
                 btnSignUp.setEnabled(true);
-                showError("Sign up failed: " + e.getMessage());
+                Toast.makeText(SignUpActivity.this, "Sign up failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
             });
     }
 
@@ -86,22 +91,22 @@ public class SignUpActivity extends BaseActivity {
                                  String confirmPassword, String name, String schoolName) {
         if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() 
             || name.isEmpty() || schoolName.isEmpty()) {
-            showToast("Please fill all fields");
+            Toast.makeText(SignUpActivity.this, "Please fill all fields", Toast.LENGTH_LONG).show();
             return false;
         }
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            showToast("Please enter a valid email address");
+            Toast.makeText(SignUpActivity.this, "Please enter a valid email address", Toast.LENGTH_LONG).show();
             return false;
         }
 
         if (!password.equals(confirmPassword)) {
-            showToast("Passwords do not match");
+            Toast.makeText(SignUpActivity.this, "Passwords do not match", Toast.LENGTH_LONG).show();
             return false;
         }
 
         if (password.length() < 6) {
-            showToast("Password should be at least 6 characters long");
+            Toast.makeText(SignUpActivity.this, "Password should be at least 6 characters long", Toast.LENGTH_LONG).show();
             return false;
         }
 
@@ -119,6 +124,6 @@ public class SignUpActivity extends BaseActivity {
         db.collection("users").document(userId)
             .set(user)
             .addOnFailureListener(e -> 
-                showError("Error saving user data: " + e.getMessage()));
+                Toast.makeText(SignUpActivity.this, "Error saving user data: " + e.getMessage(), Toast.LENGTH_LONG).show());
     }
 } 
