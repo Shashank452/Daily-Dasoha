@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvLastUpdated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Updated: Never"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Class 1-5 Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class 1-5"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rice (g)"/>
+            <EditText
+                android:id="@+id/etRice15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wheat (g)"/>
+            <EditText
+                android:id="@+id/etWheat15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Milk (g)"/>
+            <EditText
+                android:id="@+id/etMilk15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dhal (g)"/>
+            <EditText
+                android:id="@+id/etDhal15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Oil (g)"/>
+            <EditText
+                android:id="@+id/etOil15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salt (g)"/>
+            <EditText
+                android:id="@+id/etSalt15"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <!-- Class 6-8 Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class 6-8"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rice (g)"/>
+            <EditText
+                android:id="@+id/etRice68"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wheat (g)"/>
+            <EditText
+                android:id="@+id/etWheat68"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Milk (g)"/>
+            <EditText
+                android:id="@+id/etMilk68"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dhal (g)"/>
+            <EditText
+                android:id="@+id/etDhal68"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Oil (g)"/>
+            <EditText
+                android:id="@+id/etOil68"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salt (g)"/>
+            <EditText
+                android:id="@+id/etSalt68"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <!-- Class 9-10 Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class 9-10"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rice (g)"/>
+            <EditText
+                android:id="@+id/etRice910"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wheat (g)"/>
+            <EditText
+                android:id="@+id/etWheat910"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Milk (g)"/>
+            <EditText
+                android:id="@+id/etMilk910"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dhal (g)"/>
+            <EditText
+                android:id="@+id/etDhal910"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Oil (g)"/>
+            <EditText
+                android:id="@+id/etOil910"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salt (g)"/>
+            <EditText
+                android:id="@+id/etSalt910"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Inventory"
+            android:layout_marginTop="24dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView> 

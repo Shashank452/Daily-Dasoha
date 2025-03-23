@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Primary Theme Colors -->
+    <color name="primary">#1976D2</color>          <!-- Material Blue 700 -->
+    <color name="primary_dark">#1565C0</color>     <!-- Material Blue 800 -->
+    <color name="primary_light">#BBDEFB</color>    <!-- Material Blue 100 -->
+    <color name="accent">#FFC107</color>           <!-- Material Amber 500 -->
+
+    <!-- Text Colors - All Dark -->
+    <color name="primary_text">#212121</color>     <!-- Very Dark Grey -->
+    <color name="secondary_text">#424242</color>   <!-- Dark Grey -->
+    <color name="tertiary_text">#616161</color>    <!-- Medium Dark Grey -->
+    
+    <!-- Background Colors -->
+    <color name="background">#F5F5F5</color>
+    <color name="card_background">@color/white</color>
+    <color name="divider">#BDBDBD</color>
+
+    <!-- Table Colors -->
+    <color name="table_header_bg">@color/primary_light</color>
+    <color name="table_row_bg">@color/white</color>
+    <color name="table_row_alt_bg">#F5F5F5</color>
+    <color name="table_border">#E0E0E0</color>
+    <color name="table_text_header">#212121</color>    <!-- Dark text for headers -->
+    <color name="table_text_data">#212121</color>      <!-- Dark text for data -->
+    <color name="table_text_total">#1976D2</color>     <!-- Blue text for totals -->
+    <color name="table_text_highlight">#1976D2</color> <!-- Blue text for highlights -->
+
+    <!-- Status Colors -->
+    <color name="working_day_yes">#2E7D32</color>      <!-- Dark Green -->
+    <color name="working_day_no">#C62828</color>       <!-- Dark Red -->
+
+    <!-- Dark Theme Colors -->
+    <color name="primary_dark_theme">#1565C0</color>
+    <color name="primary_dark_dark_theme">#0D47A1</color>
+    <color name="accent_dark_theme">#FFB300</color>
+    <color name="background_dark">#121212</color>
+    <color name="card_background_dark">#1E1E1E</color>
+    <color name="text_dark_theme">#212121</color>      <!-- Keep text dark even in dark theme -->
+
+    <color name="data_exists">#4CAF50</color> <!-- Green -->
+    <color name="no_data">#F44336</color> <!-- Red -->
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/table_header_bg"
+    android:padding="4dp"
+    android:gravity="center_vertical">
+
+    <!-- Basic Info -->
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="90dp"
+        android:gravity="center"
+        android:text="Date"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="60dp"
+        android:gravity="center"
+        android:text="Working\nDay"/>
+
+    <!-- Student Counts -->
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Students\n(1-5)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Students\n(6-8)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Students\n(9-10)"/>
+
+    <!-- Class 1-5 Inventory -->
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Milk\n(1-5)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Rice\n(1-5)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Wheat\n(1-5)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Dhal\n(1-5)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Oil\n(1-5)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Salt\n(1-5)"/>
+
+    <!-- Class 6-8 Inventory -->
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Milk\n(6-8)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Rice\n(6-8)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Wheat\n(6-8)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Dhal\n(6-8)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Oil\n(6-8)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Salt\n(6-8)"/>
+
+    <!-- Class 9-10 Inventory -->
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Milk\n(9-10)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Rice\n(9-10)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Wheat\n(9-10)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Dhal\n(9-10)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Oil\n(9-10)"/>
+
+    <TextView
+        style="@style/TableHeaderText"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:text="Salt\n(9-10)"/>
+</TableRow> 

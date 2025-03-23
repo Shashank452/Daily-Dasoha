@@ -1,0 +1,52 @@
+[versions]
+agp = "8.7.3"
+androidxJunit = "1.1.5"
+appcompatVersion = "1.6.1"
+constraintlayoutVersion = "2.1.4"
+espressoCoreVersion = "3.5.1"
+firebaseAuthVersion = "22.3.1"
+firebaseFirestore = "25.1.1"
+googleServices = "4.4.2"
+googleServicesVersion = "4.4.1"
+gradle = "8.2.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+lifecycleViewmodel = "2.8.7"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+firebaseAuth = "23.1.0"
+materialVersion = "1.11.0"
+mpandroidchart = "v3.1.0"
+roomCompiler = "2.6.1"
+
+[libraries]
+appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+constraintlayout-v214 = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayoutVersion" }
+espresso-core-v351 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
+firebase-auth-v2231 = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuthVersion" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestore" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
+google-services-v441 = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+junit-v115 = { module = "androidx.test.ext:junit", version.ref = "androidxJunit" }
+lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata", version.ref = "lifecycleViewmodel" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+material-v1110 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomCompiler" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

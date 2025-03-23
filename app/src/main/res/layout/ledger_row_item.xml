@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/TableCellText.Date"
+        android:minWidth="100dp"/>
+
+    <!-- Working Day -->
+    <TextView
+        android:id="@+id/tvWorkingDay"
+        style="@style/TableCellText.Center"
+        android:minWidth="60dp"/>
+
+    <!-- Class 1-5 -->
+    <TextView
+        android:id="@+id/tvClass1to5"
+        style="@style/TableCellText.Number"/>
+
+    <!-- Class 6-8 -->
+    <TextView
+        android:id="@+id/tvClass6to8"
+        style="@style/TableCellText.Number"/>
+
+    <!-- Class 9-10 -->
+    <TextView
+        android:id="@+id/tvClass9to10"
+        style="@style/TableCellText.Number"/>
+
+    <!-- Class 1-5 Inventory -->
+    <TextView android:id="@+id/tvMilk15" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvRice15" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvWheat15" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvDhal15" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvOil15" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvSalt15" style="@style/TableCellText.Number"/>
+
+    <!-- Class 6-8 Inventory -->
+    <TextView android:id="@+id/tvMilk68" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvRice68" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvWheat68" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvDhal68" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvOil68" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvSalt68" style="@style/TableCellText.Number"/>
+
+    <!-- Class 9-10 Inventory -->
+    <TextView android:id="@+id/tvMilk910" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvRice910" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvWheat910" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvDhal910" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvOil910" style="@style/TableCellText.Number"/>
+    <TextView android:id="@+id/tvSalt910" style="@style/TableCellText.Number"/>
+
+    <!-- Options Button -->
+    <ImageButton
+        android:id="@+id/btnOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_vert"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:contentDescription="Options"/>
+
+</TableRow> 

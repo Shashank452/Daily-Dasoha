@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="tableHeaderBackground" format="color" />
+    <attr name="tableCellBackground" format="color" />
+    <attr name="tableHeaderTextColor" format="color" />
+    <attr name="tableCellTextColor" format="color" />
+    <attr name="tableBorderColor" format="color" />
+</resources> 

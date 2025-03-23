@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Period Header -->
+            <TextView
+                android:id="@+id/tvPeriodHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Student Attendance -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Attendance"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TableRow>
+                    <TextView android:text="Class" style="@style/ReportHeaderCell"/>
+                    <TextView android:text="1-5" style="@style/ReportHeaderCell"/>
+                    <TextView android:text="6-8" style="@style/ReportHeaderCell"/>
+                    <TextView android:text="9-10" style="@style/ReportHeaderCell"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Students" style="@style/ReportLabelCell"/>
+                    <TextView android:id="@+id/tvStudents15" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvStudents68" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvStudents910" style="@style/ReportValueCell"/>
+                </TableRow>
+            </TableLayout>
+
+            <!-- Inventory Usage -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inventory Usage"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Headers -->
+                <TableRow>
+                    <TextView android:text="Item" style="@style/ReportHeaderCell"/>
+                    <TextView android:text="1-5" style="@style/ReportHeaderCell"/>
+                    <TextView android:text="6-8" style="@style/ReportHeaderCell"/>
+                    <TextView android:text="9-10" style="@style/ReportHeaderCell"/>
+                </TableRow>
+
+                <!-- Milk -->
+                <TableRow>
+                    <TextView android:text="Milk (ml)" style="@style/ReportLabelCell"/>
+                    <TextView android:id="@+id/tvMilk15" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvMilk68" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvMilk910" style="@style/ReportValueCell"/>
+                </TableRow>
+
+                <!-- Rice -->
+                <TableRow>
+                    <TextView android:text="Rice (g)" style="@style/ReportLabelCell"/>
+                    <TextView android:id="@+id/tvRice15" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvRice68" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvRice910" style="@style/ReportValueCell"/>
+                </TableRow>
+
+                <!-- Wheat -->
+                <TableRow>
+                    <TextView android:text="Wheat (g)" style="@style/ReportLabelCell"/>
+                    <TextView android:id="@+id/tvWheat15" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvWheat68" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvWheat910" style="@style/ReportValueCell"/>
+                </TableRow>
+
+                <!-- Dhal -->
+                <TableRow>
+                    <TextView android:text="Dhal (g)" style="@style/ReportLabelCell"/>
+                    <TextView android:id="@+id/tvDhal15" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvDhal68" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvDhal910" style="@style/ReportValueCell"/>
+                </TableRow>
+
+                <!-- Oil -->
+                <TableRow>
+                    <TextView android:text="Oil (ml)" style="@style/ReportLabelCell"/>
+                    <TextView android:id="@+id/tvOil15" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvOil68" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvOil910" style="@style/ReportValueCell"/>
+                </TableRow>
+
+                <!-- Salt -->
+                <TableRow>
+                    <TextView android:text="Salt (g)" style="@style/ReportLabelCell"/>
+                    <TextView android:id="@+id/tvSalt15" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvSalt68" style="@style/ReportValueCell"/>
+                    <TextView android:id="@+id/tvSalt910" style="@style/ReportValueCell"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Print Button -->
+    <Button
+        android:id="@+id/btnPrint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Print Report"
+        android:layout_margin="16dp"/>
+</LinearLayout> 

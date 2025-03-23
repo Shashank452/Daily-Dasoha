@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textDate"
+        style="@style/TableCellText"/>
+
+    <TextView
+        android:id="@+id/textWorkingDay"
+        style="@style/TableCellText"/>
+
+    <TextView
+        android:id="@+id/textClass1to5"
+        style="@style/TableCellText"/>
+
+    <TextView
+        android:id="@+id/textClass6to8"
+        style="@style/TableCellText"/>
+
+    <TextView
+        android:id="@+id/textClass9to10"
+        style="@style/TableCellText"/>
+
+    <TextView
+        android:id="@+id/textGrainType"
+        style="@style/TableCellText"/>
+
+    <TextView
+        android:id="@+id/textTotal"
+        style="@style/TableCellText"/>
+
+</TableRow> 

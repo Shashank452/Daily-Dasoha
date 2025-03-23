@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dailydasoha">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".DailyDasohaApp"
+        android:allowBackup="true"
+        android:requestLegacyExternalStorage="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DailyDasoha"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".DataEntryActivity" />
+        <activity android:name=".LedgerActivity" />
+        <activity android:name=".AnalyticsActivity" />
+        <activity android:name=".InventoryActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity
+            android:name=".AttendanceTrendsActivity"
+            android:label="Attendance Trends"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ReportActivity"
+            android:label="Report"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".CustomReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDasoha"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MonthlyReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDasoha"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

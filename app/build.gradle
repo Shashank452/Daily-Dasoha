@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.dailydasoha'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.dailydasoha"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:32.7.4')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.7.0'
+
+    // Graph libraries
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // Room Database
+    implementation 'androidx.room:room-runtime:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Apache POI for Excel
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+    
+    // iText for PDF
+    implementation 'com.itextpdf:itextg:5.5.10'
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-runtime:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    // Add this line
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.3.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

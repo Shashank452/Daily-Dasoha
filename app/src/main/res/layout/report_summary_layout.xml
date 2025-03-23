@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Period Header -->
+        <TextView
+            android:id="@+id/tvPeriodHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/primary_text"/>
+
+        <!-- Working Days Summary -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Working Days:"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvWorkingDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Student Totals -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Student Attendance"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_marginBottom="8dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Class 1-5:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvStudents15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Class 6-8:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvStudents68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Class 9-10:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvStudents910"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Inventory Totals -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Inventory Usage"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_marginBottom="8dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Milk -->
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Milk:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvTotalMilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+
+            <!-- Rice -->
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Rice:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvTotalRice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+
+            <!-- Wheat -->
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Wheat:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvTotalWheat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+
+            <!-- Dhal -->
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Dhal:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvTotalDhal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+
+            <!-- Oil -->
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Oil:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvTotalOil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+
+            <!-- Salt -->
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Salt:"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tvTotalSalt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView> 

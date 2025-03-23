@@ -1,0 +1,249 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base light theme -->
+    <style name="Theme.DailyDasoha" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Light theme colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="popupMenuStyle">@style/Widget.App.PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/Widget.App.PopupMenu</item>
+        <item name="actionOverflowMenuStyle">@style/Widget.App.PopupMenu</item>
+        
+        <!-- Table colors for light theme -->
+        <item name="tableHeaderBackground">@color/table_header_bg</item>
+        <item name="tableCellBackground">@color/table_row_bg</item>
+        <item name="tableHeaderTextColor">@color/table_text_header</item>
+        <item name="tableCellTextColor">@color/table_text_data</item>
+        <item name="tableBorderColor">@color/table_border</item>
+    </style>
+
+    <!-- Toolbar Title Style -->
+    <style name="ToolbarTitleStyle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Toolbar Theme -->
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="CardStyle">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:background">@drawable/card_background</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Custom Popup Menu Style -->
+    <style name="Widget.App.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Theme Overlay for Popup Menu -->
+    <style name="PopupMenuOverlay" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="actionOverflowMenuStyle">@style/Widget.App.PopupMenu</item>
+    </style>
+
+    <!-- Table Styles -->
+    <style name="TableHeaderText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/table_header_bg</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TableCellText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/table_cell_background</item>
+    </style>
+
+    <style name="TableSummaryText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/table_text_total</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/primary_light</item>
+    </style>
+
+    <!-- Text Appearance Styles -->
+    <style name="TableHeaderStyle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <!-- Window Animation -->
+    <style name="WindowAnimationFade">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- Table Cell Styles -->
+    <style name="TableCellText.Date">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="TableCellText.Center">
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TableCellText.Number">
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textColor">@color/table_text_data</item>
+    </style>
+
+    <style name="TableRowAlternate">
+        <item name="android:background">@color/table_row_alt_bg</item>
+    </style>
+
+    <!-- Google Sign In Button Style -->
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="strokeColor">@color/divider</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+    </style>
+
+    <!-- Report Styles -->
+    <style name="ReportHeaderStyle" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ReportSubHeaderStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="ReportRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="ReportLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="ReportValueStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <!-- Report Table Styles -->
+    <style name="ReportHeaderCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/table_header_bg</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="ReportLabelCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="ReportValueCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <!-- Ledger Styles -->
+    <style name="LedgerLabelCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:background">@color/table_header_bg</item>
+    </style>
+
+    <style name="LedgerValueCell">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:minWidth">70dp</item>
+    </style>
+
+    <!-- Calendar Styles -->
+    <style name="CalendarDateWithData" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/data_exists</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
