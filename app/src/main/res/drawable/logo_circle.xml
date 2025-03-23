@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#00000000"/>
+            <size android:width="900dp" android:height="900dp"/>
+        </shape>
+    </item>
+    <item
+        android:width="900dp"
+        android:height="900dp"
+        android:gravity="center">
+        <bitmap
+            android:src="@drawable/logo"
+            android:gravity="center"
+            android:tileMode="disabled"/>
+    </item>
+</layer-list>
